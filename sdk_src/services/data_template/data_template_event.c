@@ -197,10 +197,10 @@ static int _iot_event_json_init(void *handle, char *jsonBuffer, size_t sizeOfBuf
 
     memset(jsonBuffer, 0, sizeOfBuffer);
     if (event_count > SIGLE_EVENT) {
-        rc_of_snprintf = HAL_Snprintf(jsonBuffer, sizeOfBuffer, "{\"method\":\"%s\", \"clientToken\":\"%s\", ",
+        rc_of_snprintf = HAL_Snprintf(jsonBuffer, sizeOfBuffer, "{\"method\":\"%s\", \"clientToken\":\"%s\",\"version\":\"1.0\",  ",
                                       POST_EVENTS, pReply->client_token);
     } else {
-        rc_of_snprintf = HAL_Snprintf(jsonBuffer, sizeOfBuffer, "{\"method\":\"%s\", \"clientToken\":\"%s\", ",
+        rc_of_snprintf = HAL_Snprintf(jsonBuffer, sizeOfBuffer, "{\"method\":\"%s\", \"clientToken\":\"%s\",\"version\":\"1.0\",  ",
                                       POST_EVENT, pReply->client_token);
     }
 
